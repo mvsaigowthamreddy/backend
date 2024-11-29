@@ -9,9 +9,10 @@ import express from "express";
 import {MongoClient ,ObjectId} from "mongodb";
 import cors from "cors"
 // const uri ="mongodb://127.0.0.1:27017"
-const uri="mongodb+srv://mvsgowthamreddy09:k40lBV8cxknylCZh@cluster0.ddvid.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-// const usr= encodeURIComponent("usernmae")
-// const pwd=encodeURIComponent("password")
+const usr= encodeURIComponent("mvsgowthamreddy09")
+const pwd=encodeURIComponent("k40lBV8cxknylCZh")
+const uri=`mongodb+srv://${usr}:${pwd}@cluster0.ddvid.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+
 const client =new MongoClient(uri)
 const db=client.db("ecomm")
 const app=express();
